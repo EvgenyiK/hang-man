@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_apphang-man_FILE D:/C++/hang-man/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/apphang-man.exe)
+set(__QT_DEPLOY_TARGET_apphang-man_RUNTIME_DLLS C:/Qt/Qt_6.8.0/6.8.0/mingw_64/bin/Qt6Quick.dll;C:/Qt/Qt_6.8.0/6.8.0/mingw_64/bin/Qt6QmlModels.dll;C:/Qt/Qt_6.8.0/6.8.0/mingw_64/bin/Qt6Qml.dll;C:/Qt/Qt_6.8.0/6.8.0/mingw_64/bin/Qt6Network.dll;C:/Qt/Qt_6.8.0/6.8.0/mingw_64/bin/Qt6OpenGL.dll;C:/Qt/Qt_6.8.0/6.8.0/mingw_64/bin/Qt6Gui.dll;C:/Qt/Qt_6.8.0/6.8.0/mingw_64/bin/Qt6Core.dll)

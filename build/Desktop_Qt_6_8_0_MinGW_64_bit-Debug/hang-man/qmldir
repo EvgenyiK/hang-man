@@ -1,0 +1,5 @@
+module hang-man
+typeinfo apphang-man.qmltypes
+prefer :/hang-man/
+Main 1.0 Main.qml
+

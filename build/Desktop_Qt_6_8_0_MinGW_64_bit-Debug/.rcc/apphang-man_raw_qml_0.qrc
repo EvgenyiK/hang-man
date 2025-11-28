@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/hang-man/">
+    <file alias="Main.qml">D:/C++/hang-man/Main.qml</file>
+  </qresource>
+</RCC>
+
