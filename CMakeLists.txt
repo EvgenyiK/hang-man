@@ -17,6 +17,11 @@ qt_add_qml_module(apphang-man
     VERSION 1.0
     QML_FILES
         Main.qml
+        QML_FILES Load_Page.qml
+        QML_FILES Main_Page.qml
+        QML_FILES
+        QML_FILES Game_Page/Game_Page.qml
+        QML_FILES Game_Page/Input_Grid.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

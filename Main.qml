@@ -1,8 +1,26 @@
-import QtQuick
+import QtQuick 2.15
+import QtQuick.Controls 2.12
 
-Window {
-    width: 640
-    height: 480
+
+
+ApplicationWindow{
+    width: 360
+    height: 640
     visible: true
-    title: qsTr("Hello World")
+    title: "Hang-Man"
+
+StackView{
+    id: contentFrame
+    anchors.fill: parent
+    initialItem: Qt.resolvedUrl("Load_Page.qml")
 }
+
+Component.onCompleted: {
+    contentFrame.replace("Main_Page.qml")
+}
+
+
+}
+
+
+
