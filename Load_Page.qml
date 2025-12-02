@@ -9,10 +9,10 @@ Item {
         id: bgRec
         anchors.fill: parent
         color: "#2C3E50"
-    }
 
-    BusyIndicator{
-        id: busyIndicator
-        anchors.centerIn: parent
+        BusyIndicator{
+            id: busyIndicator
+            anchors.centerIn: parent
+        }
     }
 }
