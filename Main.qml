@@ -9,16 +9,15 @@ ApplicationWindow{
     visible: true
     title: "Hang-Man"
 
-StackView{
-    id: contentFrame
-    anchors.fill: parent
-    initialItem: Qt.resolvedUrl("Load_Page.qml")
-}
+    StackView{
+        id: contentFrame
+        anchors.fill: parent
+        initialItem: Qt.resolvedUrl("Load_Page.qml")
+    }
 
-Component.onCompleted: {
-    contentFrame.replace("Main_Page.qml")
-}
-
+    Component.onCompleted: {
+        contentFrame.replace("Main_Page.qml")
+    }
 
 }
 

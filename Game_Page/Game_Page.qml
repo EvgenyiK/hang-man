@@ -6,7 +6,7 @@ Item {
     width: 360
     height: 640
 
-    property var recColor: "#fe9000"
+    property string recColor: "#fe9000"
 
     MouseArea{
         id: root
@@ -85,7 +85,7 @@ Item {
             width: 20
             height: 91
             color: recColor
-            rotation: 150
+            rotation: 210
             visible: false
         }
 
@@ -120,6 +120,29 @@ Item {
             color: recColor
             rotation: 230
             visible: false
+        }
+    }
+
+    ListView{
+        id: listViewLetterCount
+        width: parent.width
+        height: 50
+        orientation: ListView.Horizontal
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: inputGrid.height+20
+        interactive: false
+        model: listModelCount
+        delegate: MouseArea{
+        width: 50
+        height: parent.width/10
+
+        Rectangle{
+            anchors.bottom: parent.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width-10
+            height: 4
+            color: "white"
+            }
         }
     }
 

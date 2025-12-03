@@ -1,5 +1,5 @@
 import QtQuick 2.9
-import QtQuick.Controls
+import QtQuick.Controls 2.5
 
 GridView{
     id: inputGrid
@@ -96,12 +96,12 @@ GridView{
         onClicked:{
             borderRec.border.width = 1
             if(currentWord.word.match(letter)){
-                console.log("Yes Letter:" + letter + "is in the Word")
+                console.log("Yes Letter: " + letter + " is in the Word")
                 var index = currentWord.word.indexOf(letter)
                 console.log(index)
                 wordOutputModel.insert(index, {"letter": letter})
             }else{
-                console.log("No letter:" +letter + "is in the Word")
+                console.log("No letter: " +letter + " is in the Word")
                 hangManCounter++
                 buildHangMan()
             }
@@ -126,12 +126,17 @@ GridView{
     }
 
     function winCheck(){
-        if(wordOutputModel.count == wordCount){
+        if(wordOutputModel.count === wordCount){
             console.log("Player won")
             swipeView.setCurrentIndex(2)
             winLossLabel.text = "WON"
-            wordOutputModel.clear()
-            listModelCount.clear()
+            resetGame()
+        }else if(hangManCounter === 10){
+            console.log("Player lost")
+            swipeView.setCurrentIndex(2)
+            winLossLabel.text = "LOST"
+            resetGame()
+            winLossLabel.color = "#d23742"
         }
     }
 
@@ -158,5 +163,24 @@ GridView{
         }else if(hangManCounter == 10){
             rec10.visible = true
         }
+    }
+
+    function resetGame(){
+        wordOutputModel.clear()
+        listModelCount.clear()
+        rec1.visible =false
+        rec2.visible = false
+        rec3.visible = false
+        rec4.visible = false
+        rec5.visible = false
+        rec6.visible = false
+        rec7.visible = false
+        rec8.visible = false
+        rec9.visible = false
+        rec10.visible = false
+        hangManCounter = 0
+        currentWord = ""
+        wordCount = 0
+        winLossLabel.color = "#fe9000"
     }
 }
