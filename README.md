@@ -1,0 +1,1 @@
+![Image alt](https://github.com/EvgenyiK/hang-man/352.png)
